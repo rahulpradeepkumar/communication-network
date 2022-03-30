@@ -1,0 +1,18 @@
+def login():
+    global screen2
+    global username_verify
+    global userpassword_verify
+    username_verify = StringVar()
+    userpassword_verify = StringVar()
+    screen2 = Toplevel(screen)
+    screen2.configure(bg="grey")
+    screen2.maxsize(height=420, width=420)
+    screen2.minsize(height=420, width=420)
+    screen2.title("Login Form")
+    screen2.iconbitmap("Crypto Code System.ico")
+    Label(screen2, text="welcome to login page ", font="arial 20 bold", fg="purple", bg="grey").place(x=10, y=30)
+    Label(screen2, text=" username ", font="arial 10 bold", fg="black", bg="red").place(x=10, y=90, height=30, width=100)
+    Label(screen2, text="password ", font="arial 10 bold", fg="black", bg="red").place(x=10, y=130, height=30, width=100)
+    Entry(screen2, font="arial 10 bold", bd=5, textvariable=username_verify).place(x=150, y=90, height=30, width=200)
+    Entry(screen2, font="arial 10 bold", bd=5, textvariable=userpassword_verify, show="*").place(x=150, y=130, height=30, width=200)
+    Button(screen2, font="arial 20 bold", fg="black", bg="blue", text="login", command=verify).place(x=100, y=200, height=50, width=200)
