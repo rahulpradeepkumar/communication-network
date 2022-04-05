@@ -1,3 +1,19 @@
+def verify():
+    username1 = username_verify.get()
+    userpassword1 = userpassword_verify.get()
+    path = os.getcwd()
+    os_list = os.listdir(path)
+    if username1+".txt" in os_list:
+        with open(username1+".txt", 'r') as f:
+            a = f.read().split()
+            if userpassword1 in a:
+                messagebox.showinfo("success", "login success")
+                converter()
+            else:
+                messagebox.showinfo("not found", "error")
+    else:
+        messagebox.showinfo("please first do register")
+        
 def login():
     global screen2
     global username_verify
