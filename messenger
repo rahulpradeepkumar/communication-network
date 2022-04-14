@@ -1,3 +1,17 @@
+def converter():
+    global screen3
+    global text1
+    screen3 = Toplevel(screen2)
+    screen3.maxsize(height=420, width=420)
+    screen3.minsize(height=420, width=420)
+    screen3.title("Encoding Page")
+    screen3.configure(bg="grey")
+    screen3.iconbitmap(r"C:\Users\u\Desktop\encryption_vv9_icon.ico")
+    Label(screen3, text="Enter Code For Converter Process", fg="purple", bg="grey", font="arial 10 bold").place(x=30, y=6)
+    text1 = Text(screen3, font="20", bd=5)
+    text1.place(x=20, y=50, width=320, height=120)
+    Button(screen3, text="Encrypter", font="arial 10 bold", fg="black", bg="green", command=encrypt).place(x=50, y=240, width=120, height=50)
+    Button(screen3, text="Decrypter", font="arial 10 bold", fg="black", bg="blue", command=decrypt).place(x=200, y=240, width=120, height=50)
 def verify():
     username1 = username_verify.get()
     userpassword1 = userpassword_verify.get()
